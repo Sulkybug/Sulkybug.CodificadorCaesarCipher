@@ -29,59 +29,59 @@ const caesarCipheralph = [
 
 const boton = document.querySelector(".add");
 const reset = document.querySelector(".subtract");
-const variador = document.getElementById("text");
+const rot = document.getElementById("text");
 
-let contador = 0;
+let count = 0;
 
 reset.addEventListener("click", () => {
-  if (contador > 0) {
-    contador--;
-    variador.textContent =
-      contador +
+  if (count > 0) {
+    count--;
+    rot.textContent =
+      count +
       " " +
-      caesarCipheralph[contador % 26] +
+      caesarCipheralph[count % 26] +
       " - " +
-      caesarCipheralph[(25 + contador) % 26];
+      caesarCipheralph[(25 + count) % 26];
   } else {
-    contador = 26;
-    variador.textContent =
-      contador +
+    count = 26;
+    rot.textContent =
+      count +
       " " +
-      caesarCipheralph[contador % 26] +
+      caesarCipheralph[count % 26] +
       " - " +
-      caesarCipheralph[(25 + contador) % 26];
+      caesarCipheralph[(25 + count) % 26];
   }
 });
 
 boton.addEventListener("click", () => {
-  if (contador < 26) {
-    contador++;
-    variador.textContent =
-      contador +
+  if (count < 26) {
+    count++;
+    rot.textContent =
+      count +
       " " +
-      caesarCipheralph[contador % 26] +
+      caesarCipheralph[count % 26] +
       " - " +
-      caesarCipheralph[(25 + contador) % 26];
+      caesarCipheralph[(25 + count) % 26];
   } else {
-    contador = 0;
-    variador.textContent =
-      contador +
+    count = 0;
+    rot.textContent =
+      count +
       " " +
-      caesarCipheralph[contador % 26] +
+      caesarCipheralph[count % 26] +
       " - " +
-      caesarCipheralph[(25 + contador) % 26];
+      caesarCipheralph[(25 + count) % 26];
   }
 });
 
 const entry = document.querySelector(".entry");
-let salida = document.getElementById("criptado");
-const boton2 = document.querySelector(".transform");
+let output = document.getElementById("criptado");
+const button2 = document.querySelector(".transform");
 
-boton2.addEventListener("click", () => {
+button2.addEventListener("click", () => {
   const newValue = entry.value;
   newValue.toString();
 
-  let num = contador;
+  let num = count;
 
   function rot(str, num) {
     let result = "";
@@ -104,8 +104,8 @@ boton2.addEventListener("click", () => {
 
   let result = rot(newValue, num);
 
-  //salida.innerHTML = result; // same output
-  salida.textContent = result;
+  //output.innerHTML = result; // same output
+  output.textContent = result;
 });
 
 const boton3 = document.querySelector(".translate");
@@ -114,7 +114,7 @@ boton3.addEventListener("click", () => {
   const newValue = entry.value;
   newValue.toString();
 
-  let num = contador;
+  let num = count;
 
   function rot(str, num) {
     let result = "";
@@ -137,7 +137,7 @@ boton3.addEventListener("click", () => {
 
   let result = rot(newValue, num);
 
-  salida.textContent = result;
+  output.textContent = result;
 });
 
 const deleteButton = document.querySelector(".delete");
@@ -154,5 +154,5 @@ const copyButton = document.getElementById("copy1");
 
 copyButton.addEventListener("click", function (event) {
   //event.preventDefault(); in case button doesnt have the type=button inside the form
-  navigator.clipboard.writeText(salida.textContent);
+  navigator.clipboard.writeText(output.textContent);
 });
