@@ -1,7 +1,7 @@
 html {
   background-color: darkslategrey;
   color: lightgreen;
-  font-family: "Silkscreen", cursive;
+  font-family: 'Silkscreen', cursive;
   text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
     1px -1px 1px #000;
 }
@@ -31,7 +31,7 @@ main {
   padding: 10px;
   width: 600px;
   color: white;
-  font-family: "Silkscreen", cursive;
+  font-family: 'Silkscreen', cursive;
   font-size: 17px;
   min-height: 20px;
 }
@@ -42,17 +42,17 @@ main {
   }
 }
 
-#text {
+#rot_text {
   font-size: 20px;
   color: lightsalmon;
 }
 
-#criptado {
+#output {
   width: 600px;
 }
 
 @media only screen and (max-width: 720px) {
-  #criptado {
+  #output {
     width: 280px;
   }
 }
@@ -61,7 +61,7 @@ button {
   border-radius: 25%;
   background-color: lightgreen;
   min-height: 30px;
-  font-family: "Silkscreen", cursive;
+  font-family: 'Silkscreen', cursive;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   font-size: 15x;
@@ -142,7 +142,7 @@ button:active {
 }
 .K2_CBox pre::before,
 .K2_CBox pre::after {
-  content: "";
+  content: '';
 }
 
 .tNtf span {
