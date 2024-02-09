@@ -29,7 +29,7 @@ const alphabet = [
 
 const addButton = document.querySelector('.add');
 const subtractButton = document.querySelector('.subtract');
-const rot = document.getElementById('text');
+const rot = document.getElementById('rot_text');
 
 let count = 0;
 
@@ -58,7 +58,7 @@ addButton.addEventListener('click', () => {
 });
 
 const entry = document.querySelector('.entry');
-let output = document.getElementById('criptado');
+let output = document.getElementById('output');
 const encryptButton = document.querySelector('.transform');
 
 encryptButton.addEventListener('click', () => {
