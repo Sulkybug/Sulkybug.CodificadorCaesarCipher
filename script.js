@@ -29,7 +29,7 @@ const alphabet = [
 
 const addButton = document.querySelector('.add');
 const subtractButton = document.querySelector('.subtract');
-const rot = document.getElementById('rot_text');
+const rot = document.getElementById('rotText');
 
 let count = 0;
 
